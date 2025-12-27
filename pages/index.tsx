@@ -97,7 +97,7 @@ const Home: NextPage = () => {
                 sequence={[
                   'Full Stack Developer',
                   2000,
-                  'Spring Boot Expert', 
+                  'Spring Boot Developer', 
                   2000,
                   'Android Developer',
                   2000,
