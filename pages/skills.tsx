@@ -11,10 +11,10 @@ const Skills: NextPage = () => {
     {
       title: 'Backend Development',
       skills: [
-        { name: 'Spring Boot', level: 90 },
+        { name: 'Spring Boot', level: 80 },
         { name: 'Java', level: 85 },
         { name: 'REST APIs', level: 90 },
-        { name: 'PostgreSQL', level: 80 },
+        { name: 'PostgreSQL', level: 70 },
         { name: 'Keycloak', level: 75 },
         { name: 'JWT/OAuth2', level: 85 }
       ]
@@ -23,8 +23,8 @@ const Skills: NextPage = () => {
       title: 'Frontend Development',
       skills: [
         { name: 'React', level: 85 },
-        { name: 'Angular', level: 80 },
-        { name: 'JavaScript', level: 90 },
+        { name: 'Angular', level: 70 },
+        { name: 'JavaScript', level: 80 },
         { name: 'HTML/CSS', level: 95 },
         { name: 'TypeScript', level: 75 }
       ]
