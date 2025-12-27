@@ -11,7 +11,7 @@ const Experience: NextPage = () => {
       id: 1,
       title: 'Full-Stack Developer',
       company: 'TECHNOPROJECT CO., LTD.',
-      period: 'Present',
+      period: 'November 2025 - December 2025',
       type: 'Full-time',
       location: 'Matsue, Shimane, Japan',
       description: 'Developing secure backend systems and full-stack applications with international exposure',
