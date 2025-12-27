@@ -9,77 +9,62 @@ import ProjectCard from '../components/ProjectCard'
 const projects = [
 	{
 		id: 1,
-		title: 'Small Business QR Code Menu & Order System',
+		title: 'Laptop Comparison Website',
 		description:
-			'An open-source web application that streamlines customer onboarding and digital menu/payment services for local shops and cafeterias. Customers can scan QR codes to browse digital menus, place orders, and make payments digitally.',
+			'A secure web platform for comparing laptops with enterprise-level API security. Features BFF architecture, Keycloak authentication, and comprehensive product comparison tools.',
 		techStack: [
-			'React',
-			'Node.js',
-			'MongoDB',
-			'Express',
-			'Stripe API',
-			'QR Code Generation',
+			'Spring Boot',
+			'OpenAPI Specification',
+			'Keycloak',
+			'OAuth2',
+			'JWT',
+			'RBAC',
+			'BFF Architecture',
 		],
-		github: 'https://github.com/mohitjakhotra/qr-menu-system',
-		demo: 'https://qr-menu-demo.vercel.app',
+		github: 'https://github.com/PrathameshKamble01/laptop-comparison',
+		demo: '',
 		featured: true,
 		category: 'Full Stack Application',
 	},
 	{
 		id: 2,
-		title: 'Kafka UI Dashboard',
+		title: 'Warehouse Management Android Application',
 		description:
-			'Modern web interface for monitoring and managing Kafka clusters. Built with React and TypeScript, featuring real-time topic monitoring, consumer group management, and message browsing capabilities.',
+			'A production-ready Android application for warehouse operations with modern architecture. Includes MVVM pattern, HILT dependency injection, Firebase integration, and GitLab collaboration.',
 		techStack: [
-			'React',
-			'TypeScript',
-			'Kafka REST API',
-			'Chart.js',
-			'Tailwind CSS',
+			'Kotlin',
+			'Android',
+			'MVVM',
+			'HILT',
+			'Firebase',
+			'GitLab',
 		],
-		github: 'https://github.com/mohitjakhotra/kafka-dashboard',
+		github: 'https://github.com/PrathameshKamble01/warehouse-android',
 		demo: '',
 		featured: true,
-		category: 'Enterprise Tool',
+		category: 'Mobile Application',
 	},
 	{
 		id: 3,
-		title: 'Backstage Developer Portal Plugin',
+		title: 'Cinescope - Movie Recommendation System',
 		description:
-			'Custom plugin for Backstage.io that provides developer experience enhancements including service catalog integration, CI/CD pipeline visualization, and automated documentation generation.',
-		techStack: ['TypeScript', 'Backstage.io', 'React', 'Node.js', 'PostgreSQL'],
-		github: 'https://github.com/mohitjakhotra/backstage-custom-plugin',
-		demo: '',
-		featured: false,
-		category: 'Developer Tools',
-	},
-	{
-		id: 4,
-		title: 'ServiceNow Integration POC',
-		description:
-			'Proof-of-concept application demonstrating seamless integration between custom web applications and ServiceNow ticketing system. Includes automated ticket creation, status tracking, and workflow management.',
-		techStack: ['Node.js', 'Express', 'ServiceNow API', 'JWT', 'Webhooks'],
-		github: 'https://github.com/mohitjakhotra/servicenow-integration',
-		demo: '',
-		featured: false,
-		category: 'Integration',
-	},
-	{
-		id: 5,
-		title: 'EduTech Learning Platform',
-		description:
-			'MVP for an educational technology platform featuring interactive courses, progress tracking, and collaborative learning tools. Built during internship with focus on user experience and rapid prototyping.',
-		techStack: [
-			'React',
-			'Firebase',
-			'Material-UI',
-			'React Router',
-			'Context API',
-		],
-		github: 'https://github.com/mohitjakhotra/edutech-platform',
+			'A full-stack movie recommendation platform with secure authentication and personalized suggestions. Built with modern web technologies and scalable backend architecture.',
+		techStack: ['Spring Boot', 'ReactJS', 'PostgreSQL', 'JWT', 'REST APIs'],
+		github: 'https://github.com/PrathameshKamble01/cinescope',
 		demo: '',
 		featured: false,
 		category: 'Web Application',
+	},
+	{
+		id: 4,
+		title: 'ICEM-PRAT Chatbot',
+		description:
+			'An AI-powered chatbot for college admissions and student queries. Uses PyTorch and NLP for intelligent conversation handling and information retrieval.',
+		techStack: ['PyTorch', 'NLP', 'Deep Learning', 'Python', 'Web Integration'],
+		github: 'https://github.com/PrathameshKamble01/icem-prat-chatbot',
+		demo: '',
+		featured: false,
+		category: 'AI/ML Project',
 	},
 ]
 
@@ -109,11 +94,11 @@ const Projects: NextPage = () => {
 				<title>Projects | Mohit Jakhotra</title>
 				<meta
 					name='description'
-					content='Portfolio of projects by Mohit Jakhotra - Full Stack Developer. Featuring QR code menu system, Kafka dashboard, and enterprise integrations.'
+					content='Portfolio of projects by Prathamesh Kamble - Full Stack Developer. Featuring laptop comparison website, warehouse Android app, and movie recommendation system.'
 				/>
 				<meta
 					name='keywords'
-					content='Mohit Jakhotra projects, QR code menu, Kafka dashboard, Full Stack projects, React applications'
+					content='Prathamesh Kamble projects, Spring Boot, Android Kotlin, React applications, Full Stack projects'
 				/>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 			</Head>
@@ -139,10 +124,9 @@ const Projects: NextPage = () => {
 						animate={{ opacity: 1 }}
 						transition={{ delay: 0.4, duration: 0.6 }}
 					>
-						A showcase of my work in full-stack development, from enterprise
-						applications to open-source tools
+						A showcase of my work in full-stack development, Android applications, and AI projects
 						<br className='hidden sm:inline' />
-						that solve real-world problems.
+						solving real-world problems with modern technologies.
 					</motion.p>
 				</motion.div>
 

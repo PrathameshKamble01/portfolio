@@ -36,7 +36,7 @@ const Blog: NextPage = () => {
       date: '2024',
       excerpt: 'Exploring effective strategies for managing workload, prioritizing tasks, and maintaining productivity in fast-paced development environments.',
       tags: ['Productivity', 'Career', 'Development'],
-      link: 'https://medium.com/@mohitjakhotra/how-to-get-done-work',
+      link: 'https://medium.com/@prathamesh.kamble.1221/spring-boot-best-practices',
       readTime: '5 min read'
     },
     {
@@ -46,7 +46,7 @@ const Blog: NextPage = () => {
       date: '2024',
       excerpt: 'A deep dive into one of computer science\'s most famous unsolved problems and its implications for algorithm design and computational complexity.',
       tags: ['Computer Science', 'Mathematics', 'Algorithms'],
-      link: 'https://medium.com/@mohitjakhotra/p-vs-np-importance-of-mathematics',
+      link: 'https://medium.com/@prathamesh.kamble.1221/android-kotlin-development-guide',
       readTime: '8 min read'
     },
     {
@@ -56,7 +56,7 @@ const Blog: NextPage = () => {
       date: '2023',
       excerpt: 'Personal reflections on transforming passive learning into active processing, with practical techniques for better knowledge retention and application.',
       tags: ['Learning', 'Education', 'Personal Development'],
-      link: 'https://medium.com/@mohitjakhotra/content-to-process-in-learning',
+      link: 'https://medium.com/@prathamesh.kamble.1221/jwt-authentication-best-practices',
       readTime: '6 min read'
     }
   ]
@@ -64,9 +64,9 @@ const Blog: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Blog & Publications | Mohit Jakhotra</title>
-        <meta name='description' content='Technical blog posts and publications by Mohit Jakhotra covering productivity, computer science, and learning techniques.' />
-        <meta name='keywords' content='Mohit Jakhotra blog, Medium articles, productivity tips, computer science, learning techniques' />
+        <title>Blog & Publications | Prathamesh Kamble</title>
+        <meta name='description' content='Technical blog posts and publications by Prathamesh Kamble covering software development, Spring Boot, Android development, and technology insights.' />
+        <meta name='keywords' content='Prathamesh Kamble blog, Medium articles, Spring Boot, Android development, software engineering' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       <Navbar />
@@ -210,7 +210,7 @@ const Blog: NextPage = () => {
             viewport={{ once: true }}
           >
             <motion.a
-              href='https://medium.com/@mohitjakhotra'
+              href='https://medium.com/@prathamesh.kamble.1221'
               target='_blank'
               rel='noopener noreferrer'
               className='btn-primary flex items-center justify-center gap-2'

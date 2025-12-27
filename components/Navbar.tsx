@@ -16,6 +16,7 @@ const Navbar = () => {
     { href: '/projects', label: 'Projects' },
     { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
+    { href: '/prathamesh.pdf', label: 'Resume', download: true },
   ]
 
   // Close mobile menu when route changes
@@ -63,19 +64,36 @@ const Navbar = () => {
                 transition={{ delay: index * 0.1, duration: 0.3 }}
                 className='flex items-center'
               >
-                <Link
-                  href={item.href}
-                  className={`inline-flex items-center px-1 pt-1 text-sm font-medium transition-all duration-200 relative group ${
-                    router.pathname === item.href
-                      ? 'text-blue-600 dark:text-blue-400'
-                      : 'text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400'
-                  }`}
-                >
-                  {item.label}
-                  <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 ${
-                    router.pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`}></span>
-                </Link>
+                {item.download ? (
+                  <a
+                    href={item.href}
+                    download
+                    className={`inline-flex items-center px-1 pt-1 text-sm font-medium transition-all duration-200 relative group ${
+                      router.pathname === item.href
+                        ? 'text-blue-600 dark:text-blue-400'
+                        : 'text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400'
+                    }`}
+                  >
+                    {item.label}
+                    <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 ${
+                      router.pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}></span>
+                  </a>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={`inline-flex items-center px-1 pt-1 text-sm font-medium transition-all duration-200 relative group ${
+                      router.pathname === item.href
+                        ? 'text-blue-600 dark:text-blue-400'
+                        : 'text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400'
+                    }`}
+                  >
+                    {item.label}
+                    <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 ${
+                      router.pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}></span>
+                  </Link>
+                )}
               </motion.div>
             ))}
           </div>
@@ -135,17 +153,32 @@ const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05, duration: 0.2 }}
                 >
-                  <Link
-                    href={item.href}
-                    className={`block px-3 py-2 text-base font-medium rounded-md transition-all duration-200 ${
-                      router.pathname === item.href
-                        ? 'text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/50'
-                        : 'text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/50'
-                    }`}
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
+                  {item.download ? (
+                    <a
+                      href={item.href}
+                      download
+                      className={`block px-3 py-2 text-base font-medium rounded-md transition-all duration-200 ${
+                        router.pathname === item.href
+                          ? 'text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/50'
+                          : 'text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/50'
+                      }`}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className={`block px-3 py-2 text-base font-medium rounded-md transition-all duration-200 ${
+                        router.pathname === item.href
+                          ? 'text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/50'
+                          : 'text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/50'
+                      }`}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                 </motion.div>
               ))}
             </div>

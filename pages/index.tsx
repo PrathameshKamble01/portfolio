@@ -31,9 +31,9 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Mohit Jakhotra | Full Stack Developer</title>
-        <meta name='description' content='Mohit Jakhotra - Full Stack Developer specializing in React, Node.js, and Kafka applications. Based in Pune, India.' />
-        <meta name='keywords' content='Mohit Jakhotra, Full Stack Developer, React, Node.js, Kafka, Pune, India' />
+        <title>Prathamesh Kamble | Full Stack Developer</title>
+        <meta name='description' content='Prathamesh Kamble - Full Stack Developer specializing in Spring Boot, React, Android Kotlin, and enterprise applications. Based in Pune, India.' />
+        <meta name='keywords' content='Prathamesh Kamble, Full Stack Developer, Spring Boot, React, Android Kotlin, Pune, India' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       <Navbar />
@@ -47,7 +47,7 @@ const Home: NextPage = () => {
         >
           <motion.div className='mb-8' /* variants={itemVariants} */>
             <motion.div
-              className='w-32 h-32 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-lg overflow-hidden'
+              className='w-32 h-32 mx-auto mb-6 mt-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-lg overflow-hidden'
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.5, type: "spring", stiffness: 200 }}
@@ -62,10 +62,10 @@ const Home: NextPage = () => {
               >
                 <Image
                   src='/profile.png'
-                  alt='Mohit Jakhotra - Professional Photo'
+                  alt='Prathamesh Kamble - Professional Photo'
                   width={128}
                   height={128}
-                  className='w-full h-full object-cover rounded-full'
+                  className='w-full h-full object-cover object-center rounded-full'
                   onError={(e) => {
                     // Hide the image and show MJ fallback
                     e.currentTarget.style.display = 'none';
@@ -83,7 +83,7 @@ const Home: NextPage = () => {
               className='text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent'
               // variants={itemVariants}
             >
-              Hi, I&apos;m Mohit Jakhotra
+              Hi, I&apos;m Prathamesh Kamble
             </motion.h1>
             
             {/* Typewriter Animation for Roles */}
@@ -97,9 +97,9 @@ const Home: NextPage = () => {
                 sequence={[
                   'Full Stack Developer',
                   2000,
-                  'React & Node.js Expert', 
+                  'Spring Boot Expert', 
                   2000,
-                  'Kafka Developer',
+                  'Android Developer',
                   2000,
                   'Problem Solver',
                   2000,
@@ -120,7 +120,7 @@ const Home: NextPage = () => {
               className='text-lg text-gray-500 dark:text-gray-400 mb-8 max-w-2xl mx-auto'
               // variants={itemVariants}
             >
-              Building scalable web applications with modern technologies
+              Building scalable applications with modern technologies and international experience
             </motion.p>
           </motion.div> 
 
@@ -137,6 +137,17 @@ const Home: NextPage = () => {
               <Link href='/projects' className='btn-primary inline-flex items-center gap-2'>
                 View My Work
               </Link>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <a href='/prathamesh.pdf' download className='btn-outline inline-flex items-center gap-2'>
+                Download Resume
+                <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z' />
+                </svg>
+              </a>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -163,8 +174,8 @@ const Home: NextPage = () => {
               whileHover={{ y: -5 }}
             >
               <h3 className='text-lg font-semibold mb-2'>Current Role</h3>
-              <p className='text-gray-600 dark:text-gray-300'>Full Stack Developer at IntVerse.io</p>
-              <p className='text-sm text-gray-500 mt-1'>Remote - Hyderabad</p>
+              <p className='text-gray-600 dark:text-gray-300'>Full-Stack Developer at Technoproject Co., Ltd.</p>
+              <p className='text-sm text-gray-500 mt-1'>Matsue, Shimane, Japan</p>
             </motion.div>
             <motion.div
               className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300'
@@ -174,8 +185,8 @@ const Home: NextPage = () => {
               whileHover={{ y: -5 }}
             >
               <h3 className='text-lg font-semibold mb-2'>Experience</h3>
-              <p className='text-gray-600 dark:text-gray-300'>2+ Years</p>
-              <p className='text-sm text-gray-500 mt-1'>Frontend & Backend Development</p>
+              <p className='text-gray-600 dark:text-gray-300'>3+ Years</p>
+              <p className='text-sm text-gray-500 mt-1'>Full-Stack & Android Development</p>
             </motion.div>
             <motion.div
               className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300'
@@ -185,8 +196,8 @@ const Home: NextPage = () => {
               whileHover={{ y: -5 }}
             >
               <h3 className='text-lg font-semibold mb-2'>Education</h3>
-              <p className='text-gray-600 dark:text-gray-300'>MCA (Ongoing)</p>
-              <p className='text-sm text-gray-500 mt-1'>Vellore Institute of Technology</p>
+              <p className='text-gray-600 dark:text-gray-300'>MCA (Completed)</p>
+              <p className='text-sm text-gray-500 mt-1'>Indira College of Engineering and Management</p>
             </motion.div>
           </motion.div>
         </motion.section>
@@ -242,7 +253,7 @@ const Home: NextPage = () => {
               </div>
               <h3 className='text-xl font-semibold mb-3'>Backend Development</h3>
               <p className='text-gray-600 dark:text-gray-300 text-sm leading-relaxed'>
-                Creating robust server-side applications with Node.js, databases, and scalable architectures
+                Creating robust server-side applications with Spring Boot, REST APIs, and secure authentication systems
               </p>
             </motion.div>
 
@@ -260,9 +271,9 @@ const Home: NextPage = () => {
                   <span className='text-xs font-bold text-white'>🌍</span>
                 </div>
               </div>
-              <h3 className='text-xl font-semibold mb-3'>Full Stack Solutions</h3>
+              <h3 className='text-xl font-semibold mb-3'>Android Development</h3>
               <p className='text-gray-600 dark:text-gray-300 text-sm leading-relaxed'>
-                Delivering end-to-end solutions that connect users worldwide through seamless digital experiences
+                Building production-ready Android applications with Kotlin, MVVM architecture, and modern development practices
               </p>
             </motion.div>
           </div>

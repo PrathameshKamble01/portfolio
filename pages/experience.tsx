@@ -9,39 +9,51 @@ const Experience: NextPage = () => {
   const experiences = [
     {
       id: 1,
-      title: 'Full Stack Developer',
-      company: 'IntVerse.io',
-      period: 'Aug 2023 – Present',
+      title: 'Full-Stack Developer',
+      company: 'TECHNOPROJECT CO., LTD.',
+      period: 'Present',
       type: 'Full-time',
-      location: 'Remote - Hyderabad',
-      description: 'Developing scalable web applications and enterprise solutions',
+      location: 'Matsue, Shimane, Japan',
+      description: 'Developing secure backend systems and full-stack applications with international exposure',
       responsibilities: [
-        'Developing user interfaces for Kafka applications and data streaming platforms',
-        'Maintaining and developing in-house plugins using Backstage.io for developer experience',
-        'Creating proofs-of-concept to integrate ServiceNow and ticketing services',
-        'Implementing solutions for registering client services on the platform',
-        'Writing comprehensive unit and integration tests with Jest and React Testing Library',
-        'Collaborating with cross-functional teams to deliver high-quality software solutions'
+        'Designed and developed a secure backend system using Spring Boot with a Backend-For-Frontend (BFF) architecture for structured API communication between frontend and database',
+        'Implemented enterprise-level API security with Keycloak, OAuth2, OIDC, JWT, and RBAC',
+        'Worked in a Japanese professional environment conducting all communications in Japanese',
+        'Gained hands-on experience in enterprise-level API security, authentication flows, and scalable backend architecture'
       ],
-      technologies: ['React', 'TypeScript', 'Node.js', 'Kafka', 'Backstage.io', 'ServiceNow', 'Jest', 'Docker']
+      technologies: ['Spring Boot', 'Java', 'Keycloak', 'OAuth2', 'JWT', 'RBAC', 'BFF Architecture', 'REST APIs']
     },
     {
       id: 2,
-      title: 'Frontend Developer',
-      company: 'DeepThought EduTech Ventures',
-      period: 'Jul 2022 – Jul 2023',
-      type: 'Internship',
-      location: 'Remote',
-      description: 'Building innovative web applications and MVPs for education technology',
+      title: 'Android Developer',
+      company: 'ENOVATE-IT OUTSOURCING PVT. LTD.',
+      period: 'Jan 2025 – Oct 2025',
+      type: 'Full-time',
+      location: 'Pune, Maharashtra, India',
+      description: 'Building scalable backend services and Android applications for warehouse operations',
       responsibilities: [
-        'Developed and maintained web applications using React and Node.js',
-        'Contributed to MVPs and innovative in-house applications for educational platforms',
-        'Improved UI/UX designs resulting in better user engagement and experience',
-        'Successfully launched beta-tested products with positive user feedback',
-        'Collaborated with design and product teams to implement user-centric features',
-        'Participated in agile development processes and sprint planning'
+        'Developed scalable backend services using Spring Boot and PostgreSQL',
+        'Built Android warehousing application using Kotlin, MVVM architecture, and HILT dependency injection',
+        'Implemented JWT authentication and GitLab integration for secure and efficient delivery',
+        'Collaborated with cross-functional teams to deliver production-ready Android applications'
       ],
-      technologies: ['React', 'Node.js', 'JavaScript', 'CSS', 'HTML', 'Firebase']
+      technologies: ['Kotlin', 'Android', 'MVVM', 'HILT', 'Spring Boot', 'PostgreSQL', 'JWT', 'GitLab']
+    },
+    {
+      id: 3,
+      title: 'Intern',
+      company: 'GO-LIVE FASTER',
+      period: 'Feb 2022 – Aug 2022',
+      type: 'Internship',
+      location: 'Pune, Maharashtra, India',
+      description: 'Quality assurance and testing for banking applications',
+      responsibilities: [
+        'Contributed to quality assurance of banking applications for clients (Santander, UMB)',
+        'Executed functional testing and validated compliance with project requirements',
+        'Ensured software quality and reliability through systematic testing procedures',
+        'Collaborated with development teams to identify and resolve issues'
+      ],
+      technologies: ['Quality Assurance', 'Functional Testing', 'Banking Applications', 'Compliance Testing']
     }
   ]
 
@@ -64,9 +76,9 @@ const Experience: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Experience | Mohit Jakhotra</title>
-        <meta name='description' content='Professional experience of Mohit Jakhotra - Full Stack Developer with expertise in React, Node.js, and enterprise applications.' />
-        <meta name='keywords' content='Mohit Jakhotra experience, Full Stack Developer, IntVerse.io, DeepThought EduTech' />
+        <title>Experience | Prathamesh Kamble</title>
+        <meta name='description' content='Professional experience of Prathamesh Kamble - Full Stack Developer with expertise in Spring Boot, React, Android Kotlin, and international experience in Japan.' />
+        <meta name='keywords' content='Prathamesh Kamble experience, Full Stack Developer, Technoproject Co., Ltd., Spring Boot, Android' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       <Navbar />
@@ -224,8 +236,8 @@ const Experience: NextPage = () => {
                 viewport={{ once: true }}
               >
                 <h3 className='text-lg font-semibold mb-2'>Master of Computer Applications (MCA)</h3>
-                <p className='text-blue-600 dark:text-blue-400 mb-1'>Vellore Institute of Technology</p>
-                <p className='text-sm text-gray-500'>Aug 2024 - Ongoing</p>
+                <p className='text-blue-600 dark:text-blue-400 mb-1'>Indira College of Engineering and Management</p>
+                <p className='text-sm text-gray-500'>2023 – 2025 | Pune, MH | CGPA: 7.96</p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -235,7 +247,7 @@ const Experience: NextPage = () => {
               >
                 <h3 className='text-lg font-semibold mb-2'>Bachelor of Computer Applications (BCA)</h3>
                 <p className='text-blue-600 dark:text-blue-400 mb-1'>Brihan Maharashtra College of Commerce</p>
-                <p className='text-sm text-gray-500'>Jul 2019 - May 2022</p>
+                <p className='text-sm text-gray-500'>2019 – 2022 | Pune, MH | CGPA: 7.30</p>
               </motion.div>
             </div>
           </motion.div>

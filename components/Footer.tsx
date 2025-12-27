@@ -7,17 +7,17 @@ const Footer = () => {
 
   const socialLinks = [
     {
-      href: 'https://linkedin.com/in/mohitjakhotra',
+      href: 'https://www.linkedin.com/in/prathamesh-kamble-000/',
       icon: LinkIcon,
       label: 'LinkedIn'
     },
     {
-      href: 'https://github.com/mohitjakhotra',
+      href: 'https://github.com/PrathameshKamble01',
       icon: CodeBracketIcon,
       label: 'GitHub'
     },
     {
-      href: 'https://medium.com/@mohitjakhotra',
+      href: 'https://medium.com/@prathamesh.kamble.1221',
       icon: NewspaperIcon,
       label: 'Medium'
     }
@@ -53,30 +53,48 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>Mohit Jakhotra</h3>
+            <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>Prathamesh Kamble</h3>
             <p className='text-gray-600 dark:text-gray-300 text-sm mb-4'>
-              Full Stack Developer passionate about creating efficient, scalable web applications
-              and solving complex problems with modern technologies.
+              Full Stack Developer passionate about creating secure, scalable applications
+              with international experience and modern technologies.
             </p>
-            <div className='flex space-x-4'>
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={social.href}
-                  href={social.href}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors'
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ delay: 0.2 + index * 0.1, type: "spring", stiffness: 300 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <social.icon className='w-5 h-5' />
-                  <span className='sr-only'>{social.label}</span>
-                </motion.a>
-              ))}
+            <div className='flex flex-col sm:flex-row items-start sm:items-center gap-4'>
+              <div className='flex space-x-4'>
+                {socialLinks.map((social, index) => (
+                  <motion.a
+                    key={social.href}
+                    href={social.href}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors'
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ delay: 0.2 + index * 0.1, type: "spring", stiffness: 300 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.2, rotate: 5 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <social.icon className='w-5 h-5' />
+                    <span className='sr-only'>{social.label}</span>
+                  </motion.a>
+                ))}
+              </div>
+              <motion.a
+                href='/prathamesh.pdf'
+                download
+                className='text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors inline-flex items-center gap-2 text-sm font-medium'
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.4 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z' />
+                </svg>
+                Download Resume
+              </motion.a>
             </div>
           </motion.div>
 
@@ -140,7 +158,7 @@ const Footer = () => {
         >
           <div className='flex flex-col md:flex-row justify-between items-center'>
             <p className='text-sm text-gray-600 dark:text-gray-400'>
-              © {currentYear} Mohit Jakhotra. All rights reserved.
+              © {currentYear} Prathamesh Kamble. All rights reserved.
             </p>
             <motion.p
               className='text-sm text-gray-500 dark:text-gray-500 mt-2 md:mt-0'

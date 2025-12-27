@@ -26,9 +26,9 @@ const About: NextPage = () => {
   return (
     <>
       <Head>
-        <title>About Me | Mohit Jakhotra</title>
-        <meta name='description' content='About Mohit Jakhotra - Full Stack Developer passionate about building scalable web applications and modern user experiences.' />
-        <meta name='keywords' content='Mohit Jakhotra, Full Stack Developer, React, Node.js, Kafka, Pune' />
+        <title>About Me | Prathamesh Kamble</title>
+        <meta name='description' content='About Prathamesh Kamble - Full Stack Developer with international experience in Japan, specializing in Spring Boot, React, and Android development.' />
+        <meta name='keywords' content='Prathamesh Kamble, Full Stack Developer, Spring Boot, React, Android Kotlin, Japan' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       <Navbar />
@@ -55,52 +55,31 @@ const About: NextPage = () => {
               className='text-xl leading-relaxed mb-6'
               variants={itemVariants}
             >
-              Hi, I&apos;m <strong>Mohit Jakhotra</strong>, a passionate Full Stack Developer based in Hyderabad.
-              With over 2 years of experience in web development, I specialize in creating efficient, scalable applications
-              that solve real-world problems.
+              I&apos;m a Software Engineer with full-stack development experience and international exposure through the METI Internship Program in Japan, where I worked as a Full-Stack Developer at Technoproject Co., Ltd. (Matsue, Shimane).
             </motion.p>
 
             <motion.h2
               className='text-2xl font-semibold mt-8 mb-4'
               variants={itemVariants}
             >
-              My Journey
+              My Expertise
             </motion.h2>
             <motion.p variants={itemVariants}>
-              My journey in software development began with a Bachelor&apos;s in Computer Applications from Brihan Maharashtra
-              College of Commerce. Currently, I&apos;m pursuing my Master of Computer Applications (MCA) at Vellore Institute
-              of Technology, where I continue to deepen my technical knowledge and problem-solving skills.
+              I specialize in backend development using Java and Spring Boot, with hands-on experience in BFF architecture, RESTful APIs, and secure authentication/authorization using Keycloak (OAuth2, OIDC, JWT, RBAC). I&apos;ve also worked on the frontend using Angular and React, and previously built production-ready Android applications using Kotlin, MVVM, and HILT.
             </motion.p>
 
             <motion.p variants={itemVariants}>
-              I started my professional career as a Frontend Developer at DeepThought EduTech Ventures, where I worked on
-              innovative web applications using React and Node.js. This experience taught me the importance of user-centric
-              design and rapid prototyping for MVPs.
-            </motion.p>
-
-            <motion.p variants={itemVariants}>
-              Currently, I work as a Full Stack Developer at IntVerse.io, where I develop user interfaces for Kafka applications,
-              maintain in-house plugins using Backstage.io, and create proofs-of-concept for integrating ServiceNow and
-              ticketing services. I believe in writing clean, testable code and implementing solutions that make a tangible
-              impact on business operations.
+              A key strength of mine is working in a Japanese professional environment, as my internship was conducted entirely in Japanese, supported by JLPT N3 proficiency.
             </motion.p>
 
             <motion.h2
               className='text-2xl font-semibold mt-8 mb-4'
               variants={itemVariants}
             >
-              What Drives Me
+              Career Goals
             </motion.h2>
             <motion.p variants={itemVariants}>
-              I&apos;m passionate about leveraging technology to streamline processes and create meaningful user experiences.
-              Whether it&apos;s developing a QR code menu system for local businesses or integrating complex enterprise systems,
-              I enjoy the challenge of turning complex problems into simple, elegant solutions.
-            </motion.p>
-
-            <motion.p variants={itemVariants}>
-              When I&apos;m not coding, you can find me writing technical blogs on Medium, exploring new technologies,
-              or contributing to open-source projects. I believe in continuous learning and sharing knowledge with the
-              developer community.
+              I&apos;m open to full-time software engineering opportunities where I can contribute to backend, full-stack, or platform development and grow long-term within a collaborative team.
             </motion.p>
 
             <motion.h2

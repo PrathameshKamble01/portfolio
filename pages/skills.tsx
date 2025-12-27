@@ -9,61 +9,68 @@ import Footer from '../components/Footer'
 const Skills: NextPage = () => {
   const skillCategories = [
     {
-      title: 'Frontend Development',
-      skills: [
-        { name: 'JavaScript', level: 90 },
-        { name: 'TypeScript', level: 85 },
-        { name: 'React', level: 90 },
-        { name: 'Next.js', level: 85 },
-        { name: 'Vue.js', level: 75 },
-        { name: 'Tailwind CSS', level: 90 },
-        { name: 'HTML/CSS', level: 95 }
-      ]
-    },
-    {
       title: 'Backend Development',
       skills: [
-        { name: 'Node.js', level: 85 },
-        { name: 'Express.js', level: 80 },
-        { name: 'Firebase', level: 75 },
-        { name: 'PHP', level: 70 }
+        { name: 'Spring Boot', level: 90 },
+        { name: 'Java', level: 85 },
+        { name: 'REST APIs', level: 90 },
+        { name: 'PostgreSQL', level: 80 },
+        { name: 'Keycloak', level: 75 },
+        { name: 'JWT/OAuth2', level: 85 }
       ]
     },
     {
-      title: 'Databases & Tools',
+      title: 'Frontend Development',
       skills: [
-        { name: 'MySQL', level: 80 },
-        { name: 'MongoDB', level: 85 },
-        { name: 'Docker', level: 75 },
-        { name: 'Jest', level: 80 },
-        { name: 'React Testing Library', level: 75 }
+        { name: 'React', level: 85 },
+        { name: 'Angular', level: 80 },
+        { name: 'JavaScript', level: 90 },
+        { name: 'HTML/CSS', level: 95 },
+        { name: 'TypeScript', level: 75 }
       ]
     },
     {
-      title: 'Platforms & Frameworks',
+      title: 'Mobile Development',
       skills: [
-        { name: 'Kafka', level: 80 },
-        { name: 'Backstage.io', level: 75 },
-        { name: 'ServiceNow', level: 70 },
-        { name: 'Git', level: 85 }
+        { name: 'Android Kotlin', level: 85 },
+        { name: 'MVVM Architecture', level: 80 },
+        { name: 'HILT', level: 75 },
+        { name: 'Firebase', level: 70 }
+      ]
+    },
+    {
+      title: 'Tools & Technologies',
+      skills: [
+        { name: 'Git/GitLab', level: 85 },
+        { name: 'Linux', level: 80 },
+        { name: 'Android Studio', level: 75 },
+        { name: 'PyTorch', level: 70 },
+        { name: 'NLP', level: 65 }
       ]
     }
   ]
 
   const certifications = [
     {
-      title: 'Cluster Operations with Redpanda',
-      issuer: 'Redpanda',
-      date: 'Oct 2023',
-      credentialId: 'RP-2023-CO-001',
-      description: 'Advanced Kafka-compatible streaming platform operations and management'
+      title: 'AWS Certified Cloud Practitioner',
+      issuer: 'Amazon Web Services',
+      date: '2024',
+      credentialId: 'AWS-CP-2024',
+      description: 'Foundational knowledge of AWS Cloud concepts, services, and terminology'
     },
     {
-      title: 'Algorithmic Trading with Flink',
-      issuer: 'Apache Flink Community',
-      date: 'Sep 2023',
-      credentialId: 'FLINK-2023-AT-002',
-      description: 'Real-time data processing and algorithmic trading systems using Apache Flink'
+      title: 'Java Programming Certification',
+      issuer: 'Udemy',
+      date: '2023',
+      credentialId: 'UDEMY-JAVA-2023',
+      description: 'Comprehensive Java programming skills and best practices'
+    },
+    {
+      title: 'JLPT N3 (Japanese Language Proficiency)',
+      issuer: 'Japan Foundation',
+      date: '2024',
+      credentialId: 'JLPT-N3-2024',
+      description: 'Intermediate Japanese language proficiency for professional communication'
     }
   ]
 
@@ -100,9 +107,9 @@ const Skills: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Skills & Certifications | Mohit Jakhotra</title>
-        <meta name='description' content='Technical skills and certifications of Mohit Jakhotra - Full Stack Developer proficient in React, Node.js, Kafka, and modern web technologies.' />
-        <meta name='keywords' content='Mohit Jakhotra skills, React developer, Node.js, Kafka, TypeScript, Full Stack certifications' />
+        <title>Skills & Certifications | Prathamesh Kamble</title>
+        <meta name='description' content='Technical skills and certifications of Prathamesh Kamble - Full Stack Developer proficient in Spring Boot, React, Android Kotlin, and modern web technologies.' />
+        <meta name='keywords' content='Prathamesh Kamble skills, Spring Boot developer, Android Kotlin, React, Full Stack certifications' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       <Navbar />
