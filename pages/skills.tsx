@@ -321,7 +321,7 @@ const Skills: NextPage = () => {
             {[
               {
                 title: 'Testing',
-                description: 'Jest, React Testing Library, Integration Testing'
+                description: 'Manual API Testing, Postman, Debugging & Log Analysis'
               },
               {
                 title: 'DevOps',
