@@ -1,23 +1,14 @@
 [build]
-  command = "npm run build"
-  publish = ".next"
+command = "npm run build"
+publish = ".next"
 
-[build.environment]
-  # EmailJS credentials for contact form functionality
-  NEXT_PUBLIC_EMAILJS_SERVICE_ID = "service_ncivjop"
-  NEXT_PUBLIC_EMAILJS_TEMPLATE_ID = "template_6b55q87"
-  NEXT_PUBLIC_EMAILJS_PUBLIC_KEY = "vBycubtwgg_Ji0tOh"
-
-# Configure secrets scanning to ignore EmailJS public keys
-# These are intentionally public and required for client-side functionality
-[build.processing]
-  [build.processing.secrets_scan]
-    omit_keys = [
-      "NEXT_PUBLIC_EMAILJS_SERVICE_ID",
-      "NEXT_PUBLIC_EMAILJS_TEMPLATE_ID",
-      "NEXT_PUBLIC_EMAILJS_PUBLIC_KEY"
-    ]
-    omit_paths = [
-      ".next",
-      ".netlify"
-    ]
+[build.processing.secrets_scan]
+omit_keys = [
+  "NEXT_PUBLIC_EMAILJS_SERVICE_ID",
+  "NEXT_PUBLIC_EMAILJS_TEMPLATE_ID",
+  "NEXT_PUBLIC_EMAILJS_PUBLIC_KEY"
+]
+omit_paths = [
+  ".next",
+  ".netlify"
+]
