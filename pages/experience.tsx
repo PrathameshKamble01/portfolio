@@ -118,7 +118,7 @@ const Experience: NextPage = () => {
                     {exp.title}
                   </motion.h2>
                   <motion.p
-                    className='text-lg text-blue-600 dark:text-blue-400 mb-2'
+                    className='text-lg text-primary dark:text-primary mb-2' 
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.2 }}
@@ -143,7 +143,7 @@ const Experience: NextPage = () => {
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                     exp.type === 'Full-time'
                       ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
-                      : 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
+                      : 'bg-primary/10 text-primary dark:bg-primary-dark dark:text-white' 
                   }`}>
                     {exp.type}
                   </span>
@@ -190,7 +190,7 @@ const Experience: NextPage = () => {
                   {exp.technologies.map((tech, idx) => (
                     <motion.span
                       key={tech}
-                      className='bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium'
+                      className='bg-primary/10 dark:bg-primary-dark text-primary dark:text-white px-3 py-1 rounded-full text-sm font-medium'
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ delay: 0.9 + idx * 0.05, type: "spring", stiffness: 300 }}
@@ -236,7 +236,7 @@ const Experience: NextPage = () => {
                 viewport={{ once: true }}
               >
                 <h3 className='text-lg font-semibold mb-2'>Master of Computer Applications (MCA)</h3>
-                <p className='text-blue-600 dark:text-blue-400 mb-1'>Indira College of Engineering and Management</p>
+                <p className='text-primary dark:text-primary mb-1'>Indira College of Engineering and Management</p>
                 <p className='text-sm text-gray-500'>2023 – 2025 | Pune, MH | CGPA: 7.96</p>
               </motion.div>
               <motion.div
@@ -246,7 +246,7 @@ const Experience: NextPage = () => {
                 viewport={{ once: true }}
               >
                 <h3 className='text-lg font-semibold mb-2'>Bachelor of Computer Applications (BCA)</h3>
-                <p className='text-blue-600 dark:text-blue-400 mb-1'>Brihan Maharashtra College of Commerce</p>
+                <p className='text-primary dark:text-primary mb-1'>Brihan Maharashtra College of Commerce</p>
                 <p className='text-sm text-gray-500'>2019 – 2022 | Pune, MH | CGPA: 7.30</p>
               </motion.div>
             </div>

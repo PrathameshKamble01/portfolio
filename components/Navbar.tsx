@@ -14,7 +14,6 @@ const Navbar = () => {
     { href: '/experience', label: 'Experience' },
     { href: '/skills', label: 'Skills' },
     { href: '/projects', label: 'Projects' },
-    { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
     { href: '/prathamesh.pdf', label: 'Resume', download: true },
   ]
@@ -51,7 +50,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <Link href='/' className='text-2xl font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-mono'>
+            <Link href='/' className='text-2xl font-bold text-primary dark:text-primary hover:text-primary-dark dark:hover:text-primary transition-colors font-mono'> 
               &lt;/&gt;
             </Link>
           </motion.div>
@@ -70,12 +69,12 @@ const Navbar = () => {
                     download
                     className={`inline-flex items-center px-1 pt-1 text-sm font-medium transition-all duration-200 relative group ${
                       router.pathname === item.href
-                        ? 'text-blue-600 dark:text-blue-400'
-                        : 'text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400'
+                        ? 'text-primary dark:text-primary'
+                        : 'text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary'
                     }`}
                   >
                     {item.label}
-                    <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 ${
+                    <span className={`absolute bottom-0 left-0 h-0.5 bg-primary dark:bg-primary transition-all duration-300 ${
                       router.pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
                     }`}></span>
                   </a>
@@ -84,12 +83,12 @@ const Navbar = () => {
                     href={item.href}
                     className={`inline-flex items-center px-1 pt-1 text-sm font-medium transition-all duration-200 relative group ${
                       router.pathname === item.href
-                        ? 'text-blue-600 dark:text-blue-400'
-                        : 'text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400'
+                        ? 'text-primary dark:text-primary'
+                        : 'text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary'
                     }`}
                   >
                     {item.label}
-                    <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 ${
+                    <span className={`absolute bottom-0 left-0 h-0.5 bg-primary dark:bg-primary transition-all duration-300 ${
                       router.pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
                     }`}></span>
                   </Link>
@@ -101,7 +100,7 @@ const Navbar = () => {
             <motion.button
               onClick={() => setMenuOpen(!menuOpen)}
               type='button'
-              className='bg-gray-100 dark:bg-gray-800 p-2 rounded-md inline-flex items-center justify-center text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors mobile-menu-container'
+              className='bg-gray-100 dark:bg-gray-800 p-2 rounded-md inline-flex items-center justify-center text-gray-400 hover:text-primary dark:hover:text-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors mobile-menu-container'
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               aria-expanded={menuOpen}

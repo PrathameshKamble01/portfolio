@@ -47,7 +47,7 @@ const Home: NextPage = () => {
         >
           <motion.div className='mb-8' /* variants={itemVariants} */>
             <motion.div
-              className='w-32 h-32 mx-auto mb-6 mt-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-lg overflow-hidden'
+              className='w-32 h-32 mx-auto mb-6 mt-10 bg-gradient-to-r from-primary to-primary-dark rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-lg overflow-hidden' 
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.5, type: "spring", stiffness: 200 }}
@@ -61,7 +61,7 @@ const Home: NextPage = () => {
                 className='w-full h-full'
               >
                 <Image
-                  src='/profile.png'
+                  src='/profile.png?v=1'
                   alt='Prathamesh Kamble - Professional Photo'
                   width={128}
                   height={128}
@@ -80,7 +80,7 @@ const Home: NextPage = () => {
             </motion.div>
             {/* Static Name */}
             <motion.h1
-              className='text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent'
+              className='text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent' 
               // variants={itemVariants}
             >
               Hi, I&apos;m Prathamesh Kamble
@@ -173,7 +173,7 @@ const Home: NextPage = () => {
               transition={{ delay: 1.2, duration: 0.4 }}
               whileHover={{ y: -5 }}
             >
-              <h3 className='text-lg font-semibold mb-2'>Current Role</h3>
+              <h3 className='text-lg font-semibold mb-2'>Previous Role</h3>
               <p className='text-gray-600 dark:text-gray-300'>Full-Stack Developer at Technoproject Co., Ltd.</p>
               <p className='text-sm text-gray-500 mt-1'>Matsue, Shimane, Japan</p>
             </motion.div>
@@ -185,7 +185,7 @@ const Home: NextPage = () => {
               whileHover={{ y: -5 }}
             >
               <h3 className='text-lg font-semibold mb-2'>Experience</h3>
-              <p className='text-gray-600 dark:text-gray-300'>3+ Years</p>
+              <p className='text-gray-600 dark:text-gray-300'>1.5 Years</p>
               <p className='text-sm text-gray-500 mt-1'>Full-Stack & Android Development</p>
             </motion.div>
             <motion.div
@@ -224,7 +224,7 @@ const Home: NextPage = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <div className='relative mb-6'>
-                <div className='w-24 h-24 mx-auto bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300'>
+                <div className='w-24 h-24 mx-auto bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300' >
                   <CodeBracketIcon className='w-12 h-12 text-white' />
                 </div>
                 <div className='absolute -top-2 -right-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center'>
@@ -264,7 +264,7 @@ const Home: NextPage = () => {
               transition={{ type: "spring", stiffness: 300, delay: 0.2 }}
             >
               <div className='relative mb-6'>
-                <div className='w-24 h-24 mx-auto bg-gradient-to-br from-blue-400 to-gray-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300'>
+                <div className='w-24 h-24 mx-auto bg-gradient-to-br from-primary/70 to-gray-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300'>
                   <GlobeAltIcon className='w-12 h-12 text-white' />
                 </div>
                 <div className='absolute -top-2 -right-2 w-8 h-8 bg-red-400 rounded-full flex items-center justify-center'>

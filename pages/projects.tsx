@@ -161,9 +161,9 @@ const Projects: NextPage = () => {
 								whileHover={{ y: -5 }}
 								transition={{ duration: 0.3 }}
 							>
-								<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 border-2 border-blue-200 dark:border-blue-800'>
+								<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 border-2 border-primary/20 dark:border-primary-dark'>
 									<div className='flex justify-between items-start mb-4'>
-										<span className='bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium'>
+										<span className='bg-primary/10 dark:bg-primary-dark text-primary dark:text-white px-3 py-1 rounded-full text-sm font-medium'> 
 											{project.category}
 										</span>
 										{project.featured && (

@@ -92,7 +92,7 @@ const Skills: NextPage = () => {
 
   const getProficiencyColor = (level: number) => {
     if (level >= 85) return 'bg-green-500'
-    if (level >= 75) return 'bg-blue-500'
+    if (level >= 75) return 'bg-primary'
     if (level >= 65) return 'bg-yellow-500'
     return 'bg-red-500'
   }
@@ -181,7 +181,7 @@ const Skills: NextPage = () => {
                   transition={{ delay: 0.1, duration: 0.4 }}
                   viewport={{ once: true }}
                 >
-                  <div className='w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center'>
+                  <div className='w-8 h-8 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center' >
                     {category.title === 'Frontend Development' && <CodeBracketIcon className='w-5 h-5 text-white' />}
                     {category.title === 'Backend Development' && <ServerIcon className='w-5 h-5 text-white' />}
                     {category.title === 'Databases & Tools' && <CircleStackIcon className='w-5 h-5 text-white' />}
@@ -246,7 +246,7 @@ const Skills: NextPage = () => {
             {certifications.map((cert, index) => (
               <motion.div
                 key={index}
-                className='bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-blue-500 hover:shadow-lg transition-shadow duration-300'
+                className='bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-primary hover:shadow-lg transition-shadow duration-300'
                 variants={itemVariants}
                 whileHover={{ y: -5, scale: 1.02 }}
                 transition={{ duration: 0.3 }}
@@ -259,7 +259,7 @@ const Skills: NextPage = () => {
                     viewport={{ once: true }}
                   >
                     <h3 className='text-lg font-semibold mb-1'>{cert.title}</h3>
-                    <p className='text-blue-600 dark:text-blue-400 font-medium'>{cert.issuer}</p>
+                    <p className='text-primary dark:text-primary font-medium'>{cert.issuer}</p>
                   </motion.div>
                   <motion.span
                     className='text-sm text-gray-500 bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full'

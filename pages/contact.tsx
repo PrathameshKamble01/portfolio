@@ -55,15 +55,22 @@ const Contact: NextPage = () => {
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
-    // TODO: Set up EmailJS account at https://www.emailjs.com/
-    // Replace the service ID, template ID, and public key below with your EmailJS credentials
-    const SERVICE_ID = 'service_d5yobdz' // Get from EmailJS dashboard
-    const TEMPLATE_ID = 'template_q6hdn4t' // Create a template in EmailJS
-    const PUBLIC_KEY = 'xJHbH6idsn_vIY_Rw' // Get from EmailJS dashboard
+    // EmailJS configuration from environment variables
+    const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+    const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+    const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+
+    // Check if EmailJS is properly configured
+    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+      console.error('EmailJS configuration missing. Please set up environment variables.')
+      setSubmitStatus('error')
+      setIsSubmitting(false)
+      return
+    }
 
     const form = e.currentTarget
     const formData = new FormData(form)
-    
+
     const templateParams = {
       from_name: `${formData.get('firstName')} ${formData.get('lastName')}`.trim(),
       from_email: formData.get('email'),
@@ -79,7 +86,7 @@ const Contact: NextPage = () => {
         templateParams,
         PUBLIC_KEY
       )
-      
+
       setSubmitStatus('success')
       form.reset()
       setSelectedSubject('')
@@ -121,7 +128,7 @@ const Contact: NextPage = () => {
             whileHover={{ y: -5 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className='w-16 h-16 mx-auto bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300 mb-4'>
+            <div className='w-16 h-16 mx-auto bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300 mb-4' >
               <PaperAirplaneIcon className='w-8 h-8 text-white' />
             </div>
             <h3 className='text-lg font-semibold mb-2'>Quick Response</h3>
@@ -157,6 +164,24 @@ const Contact: NextPage = () => {
           {/* Contact Form */}
           <div className='bg-white dark:bg-gray-800 rounded-lg shadow-md p-8'>
             <h2 className='text-2xl font-semibold mb-6'>Send a Message</h2>
+
+            {/* EmailJS Configuration Notice */}
+            {(!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ||
+              !process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ||
+              !process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) && (
+              <div className='p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg mb-6'>
+                <div className='flex items-center gap-2'>
+                  <svg className='w-5 h-5 text-yellow-600 dark:text-yellow-400' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z' />
+                  </svg>
+                  <p className='text-yellow-800 dark:text-yellow-200 font-medium'>Email service not configured</p>
+                </div>
+                <p className='text-yellow-700 dark:text-yellow-300 text-sm mt-1'>
+                  Contact form emails are not working. Please use the email address below or contact me on LinkedIn.
+                </p>
+              </div>
+            )}
+
             <form onSubmit={handleSubmit} className='space-y-6'>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                 <div>
@@ -165,7 +190,7 @@ const Contact: NextPage = () => {
                     type='text'
                     id='firstName'
                     name='firstName'
-                    className='w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white'
+                    className='w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white'
                     required
                   />
                 </div>
@@ -175,7 +200,7 @@ const Contact: NextPage = () => {
                     type='text'
                     id='lastName'
                     name='lastName'
-                    className='w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white'
+                    className='w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white'
                     required
                   />
                 </div>
@@ -187,7 +212,7 @@ const Contact: NextPage = () => {
                   type='email'
                   id='email'
                   name='email'
-                  className='w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white'
+                  className='w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white'
                   required
                 />
               </div>
@@ -196,7 +221,7 @@ const Contact: NextPage = () => {
                 <label htmlFor='subject' className='block text-sm font-medium mb-2'>Subject</label>
                 <Listbox value={selectedSubject} onChange={setSelectedSubject}>
                   <div className='relative mt-1'>
-                    <Listbox.Button className='relative w-full cursor-default rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 py-3 pl-4 pr-10 text-left shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:text-white'>
+                    <Listbox.Button className='relative w-full cursor-default rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 py-3 pl-4 pr-10 text-left shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent dark:text-white'>
                       <span className='block truncate'>
                         {selectedSubject ? subjectOptions.find(option => option.id === selectedSubject)?.name : 'Select a topic'}
                       </span>
@@ -219,7 +244,7 @@ const Contact: NextPage = () => {
                             key={option.id}
                             className={({ active }) =>
                               `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                                active ? 'bg-blue-100 dark:bg-blue-600 text-blue-900 dark:text-white' : 'text-gray-900 dark:text-gray-100'
+                                active ? 'bg-primary/10 dark:bg-primary-dark text-primary dark:text-white' : 'text-gray-900 dark:text-gray-100'
                               }`
                             }
                             value={option.id}
@@ -234,7 +259,7 @@ const Contact: NextPage = () => {
                                   {option.name}
                                 </span>
                                 {selected ? (
-                                  <span className='absolute inset-y-0 left-0 flex items-center pl-3 text-blue-600 dark:text-blue-400'>
+                                  <span className='absolute inset-y-0 left-0 flex items-center pl-3 text-primary dark:text-primary'>
                                     <CheckIcon className='h-5 w-5' aria-hidden='true' />
                                   </span>
                                 ) : null}
@@ -254,7 +279,7 @@ const Contact: NextPage = () => {
                   id='message'
                   name='message'
                   rows={6}
-                  className='w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white'
+                  className='w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white'
                   placeholder='Tell me about your project or opportunity...'
                   required
                 ></textarea>
@@ -312,8 +337,8 @@ const Contact: NextPage = () => {
               <h2 className='text-2xl font-semibold mb-6'>Contact Information</h2>
               <div className='space-y-4'>
                 <div className='flex items-center gap-4'>
-                  <div className='w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center'>
-                    <svg className='w-5 h-5 text-blue-600 dark:text-blue-400' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <div className='w-10 h-10 bg-primary/10 dark:bg-primary-dark rounded-lg flex items-center justify-center'>
+                    <svg className='w-5 h-5 text-primary dark:text-primary' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                       <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' />
                     </svg>
                   </div>
@@ -324,8 +349,8 @@ const Contact: NextPage = () => {
                 </div>
 
                 <div className='flex items-center gap-4'>
-                  <div className='w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center'>
-                    <svg className='w-5 h-5 text-blue-600 dark:text-blue-400' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <div className='w-10 h-10 bg-primary/10 dark:bg-primary-dark rounded-lg flex items-center justify-center'>
+                    <svg className='w-5 h-5 text-primary dark:text-primary' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                       <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z' />
                       <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M15 11a3 3 0 11-6 0 3 3 0 016 0z' />
                     </svg>
@@ -337,8 +362,8 @@ const Contact: NextPage = () => {
                 </div>
 
                 <div className='flex items-center gap-4'>
-                  <div className='w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center'>
-                    <svg className='w-5 h-5 text-blue-600 dark:text-blue-400' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <div className='w-10 h-10 bg-primary/10 dark:bg-primary-dark rounded-lg flex items-center justify-center'>
+                    <svg className='w-5 h-5 text-primary dark:text-primary' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                       <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' />
                     </svg>
                   </div>
@@ -365,7 +390,7 @@ const Contact: NextPage = () => {
                     rel='noopener noreferrer'
                     className='flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors'
                   >
-                    <div className='w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center text-blue-600 dark:text-blue-400'>
+                    <div className='w-10 h-10 bg-primary/10 dark:bg-primary-dark rounded-lg flex items-center justify-center text-primary dark:text-white'>
                       {social.icon}
                     </div>
                     <div>
@@ -387,7 +412,7 @@ const Contact: NextPage = () => {
                 <h3 className='text-lg font-semibold text-green-800 dark:text-green-200'>Available for Opportunities</h3>
               </div>
               <p className='text-green-700 dark:text-green-300'>
-                I&apos;m currently open to full-time positions, freelance projects, and consulting opportunities.
+                I&apos;m available for full-time positions, freelance projects, and consulting opportunities.
                 Let&apos;s discuss how we can work together!
               </p>
             </div>

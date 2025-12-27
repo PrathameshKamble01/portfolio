@@ -3,12 +3,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#2563eb',      // Professional blue (hardworking, reliable)
-        accent: '#3b82f6',       // Lighter blue accent (efficient, clean)
-        neutral: '#64748b',      // Slate gray (minimalist, simple)
+        primary: {
+          DEFAULT: '#0F4C81', // Deep navy (enterprise / trust)
+          dark: '#0B3A60'     // Darker variant for hover/gradients
+        },
+        accent: '#14B8A6',     // Teal accent for highlights
+        surface: '#F3F4F6',    // Light surface
+        neutral: '#64748b'
       },
       fontFamily: {
-        sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif']
+        sans: ['Inter', 'Noto Sans JP', 'system-ui', 'Helvetica', 'Arial', 'sans-serif']
       }
     }
   },

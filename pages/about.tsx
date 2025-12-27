@@ -99,7 +99,7 @@ const About: NextPage = () => {
                 whileHover={{ y: -5, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
+                <div className='w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
                   <LightBulbIcon className='w-6 h-6 text-white' />
                 </div>
                 <h3 className='text-lg font-semibold mb-2'>Innovation</h3>
