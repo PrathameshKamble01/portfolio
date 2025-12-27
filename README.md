@@ -76,12 +76,32 @@ npm run export       # Export static site (if configured)
 
 ## 🚀 Deployment
 
+### Vercel Deployment
 This project is optimized for deployment on Vercel:
 
 1. Push your code to GitHub
 2. Connect your repository to Vercel
-3. Vercel will automatically detect Next.js and deploy
-4. Add your custom domain in Vercel settings
+3. Add your custom domain in Vercel settings
+
+### Netlify Deployment
+For Netlify deployment:
+
+1. **Set up build environment variables** in Netlify dashboard:
+   - `NEXT_PUBLIC_EMAILJS_SERVICE_ID`
+   - `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`
+   - `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`
+
+2. **Configure build settings**:
+   - Build command: `npm run build`
+   - Publish directory: `.next`
+   - Node version: `18.x` or higher
+
+3. **The `netlify.toml` file** is already configured with:
+   - Build settings
+   - Environment variables (update with your actual values)
+   - Secrets scanning exclusions for EmailJS keys
+
+4. Push to your repository and connect to Netlify
 
 ## 📁 Project Structure
 
@@ -160,14 +180,13 @@ Before deploying, make sure to:
   1. Create a free account at [emailjs.com](https://www.emailjs.com/)
   2. Create an email service (Gmail, Outlook, etc.)
   3. Create an email template with these variables: `{{from_name}}`, `{{from_email}}`, `{{subject}}`, `{{message}}`, `{{to_name}}`
-  4. Copy your Service ID, Template ID, and Public Key from the EmailJS dashboard
-  5. Update the `.env.local` file in the root directory:
-     ```
-     NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_actual_service_id
-     NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_actual_template_id
-     NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_actual_public_key
-     ```
-  6. Restart the development server after updating environment variables
+  4. Copy your Service ID, Template ID, and Public Key
+  5. **For local development**: Update `.env.local` with your credentials
+  6. **For Netlify deployment**: Add environment variables in Netlify dashboard:
+     - `NEXT_PUBLIC_EMAILJS_SERVICE_ID`
+     - `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`
+     - `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`
+  7. **For other platforms**: Add the environment variables in your deployment platform's settings
 - [ ] Add your CV/resume as `public/prathamesh.pdf`
 - [ ] Replace the avatar placeholder in `pages/index.tsx` with your actual photo
 - [ ] Verify all GitHub repository links are accessible
