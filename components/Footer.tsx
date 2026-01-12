@@ -16,11 +16,11 @@ const Footer = () => {
       icon: CodeBracketIcon,
       label: 'GitHub'
     },
-    {
-      href: 'https://medium.com/@prathamesh.kamble.1221',
-      icon: NewspaperIcon,
-      label: 'Medium'
-    }
+    // {
+    //   href: 'https://medium.com/@prathamesh.kamble.1221',
+    //   icon: NewspaperIcon,
+    //   label: 'Medium'
+    // }
   ]
 
   const quickLinks = [
