@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { LinkIcon, CodeBracketIcon, NewspaperIcon } from '@heroicons/react/24/outline'
+import { LinkIcon, CodeBracketIcon } from '@heroicons/react/24/outline'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
