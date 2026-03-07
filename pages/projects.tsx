@@ -91,7 +91,7 @@ const Projects: NextPage = () => {
 	return (
 		<>
 			<Head>
-				<title>Projects | Mohit Jakhotra</title>
+				<title>Projects | Prathamesh</title>
 				<meta
 					name='description'
 					content='Portfolio of projects by Prathamesh Kamble - Full Stack Developer. Featuring laptop comparison website, warehouse Android app, and movie recommendation system.'

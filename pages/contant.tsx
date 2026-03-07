@@ -38,8 +38,8 @@ const Contact: NextPage = () => {
     <>
       <Head>
         <title>Contact | Prathamesh Kamble</title>
-        <meta name='description' content='Get in touch with Mohit Jakhotra - Full Stack Developer. Available for freelance projects, collaborations, and full-time opportunities.' />
-        <meta name='keywords' content='Mohit Jakhotra contact, Full Stack Developer hire, Pune developer, freelance developer' />
+        <meta name='description' content='Get in touch with Prathamesh - Full Stack Developer. Available for freelance projects, collaborations, and full-time opportunities.' />
+        <meta name='keywords' content='Prathamesh contact, Full Stack Developer hire, Pune developer, freelance developer' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       <Navbar />
@@ -142,7 +142,7 @@ const Contact: NextPage = () => {
                   </div>
                   <div>
                     <p className='font-medium'>Email</p>
-                    <p className='text-gray-600 dark:text-gray-300'>mohitjakhotra@example.com</p>
+                    <p className='text-gray-600 dark:text-gray-300'>prathamesh@example.com</p>
                   </div>
                 </div>
 
