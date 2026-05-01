@@ -8,7 +8,28 @@ import ProjectCard from '../components/ProjectCard'
 
 const projects = [
 	{
-		id: 1,
+        id: 1,
+        title: 'RAG Chatbot',
+        description:
+            'A production-ready Retrieval-Augmented Generation chatbot that answers questions grounded in uploaded PDF documents. Features a 3-layer caching system (LRU + semantic vector cache), async PDF ingestion with live job tracking, hexagonal architecture with swappable LLM providers, and a React frontend with real-time ingestion status polling.',
+        techStack: [
+            'Spring Boot',
+            'Spring AI',
+            'React',
+            'Vite',
+            'Groq (Llama 3.3)',
+            'Gemini Embeddings',
+            'Pinecone',
+            'RAG',
+            'REST APIs',
+        ],
+        github: 'https://github.com/PrathameshKamble01/ragbot-be',
+        demo: '',
+        featured: true,
+        category: 'AI/ML Project',
+    },
+	{
+		id: 2,
 		title: 'Laptop Comparison Website',
 		description:
 			'A secure web platform for comparing laptops with enterprise-level API security. Features BFF architecture, Keycloak authentication, and comprehensive product comparison tools.',
@@ -27,7 +48,7 @@ const projects = [
 		category: 'Full Stack Application',
 	},
 	{
-		id: 2,
+		id: 3,
 		title: 'Warehouse Management Android Application',
 		description:
 			'A production-ready Android application for warehouse operations with modern architecture. Includes MVVM pattern, HILT dependency injection, Firebase integration, and GitLab collaboration.',
@@ -45,7 +66,7 @@ const projects = [
 		category: 'Mobile Application',
 	},
 	{
-		id: 3,
+		id: 4,
 		title: 'Cinescope - Movie Recommendation System',
 		description:
 			'A full-stack movie recommendation platform with secure authentication and personalized suggestions. Built with modern web technologies and scalable backend architecture.',
@@ -56,12 +77,12 @@ const projects = [
 		category: 'Web Application',
 	},
 	{
-		id: 4,
+		id: 5,
 		title: 'ICEM-PRAT Chatbot',
 		description:
 			'An AI-powered chatbot for college admissions and student queries. Uses PyTorch and NLP for intelligent conversation handling and information retrieval.',
 		techStack: ['PyTorch', 'NLP', 'Deep Learning', 'Python', 'Web Integration'],
-		github: 'https://github.com/PrathameshKamble01/icem-prat-chatbot',
+		github: 'https://github.com/PrathameshKamble01/chat-i-Bot',
 		demo: '',
 		featured: false,
 		category: 'AI/ML Project',
